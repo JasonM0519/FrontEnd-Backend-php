@@ -7,9 +7,9 @@
 		echo 'Not Connected To Server';
 	}
 	
-	if(!mysqli_select_db($con'Seller_Information'));
+	if(!mysqli_select_dev($con,'Seller_Information')){
 	{
-		echo 'Database not Selected');
+		echo 'Database not Selected';
 	}
 	
 	$Name = $_POST['username'];
