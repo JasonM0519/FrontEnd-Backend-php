@@ -1,0 +1,188 @@
+	<html>
+	<head>
+	
+	<title>Car Form</title>
+	<div id="form-wrapper" style="max-width:500px;margin:auto;">
+	<style type="text/css" media="all">
+	.form_table { text-align: left; }
+	.full_width .segment_header { text-align: center !important; }
+	.q { float:none;display: inline-block; }
+	table.matrix, table.rating_ranking { margin-left:auto !important;margin-right:auto !important; }
+	</style>
+	</head>
+	<body>
+	
+	
+	<form action="insert.php" method="post"
+	
+	<body class="super-container">
+	<h1 id="title">Add a new vehicle</h1>
+	<p id="description"><h2>Personal Info</h2></p>
+    
+    <!-- beginning of the form that requests personal info-->
+  
+    <div class="container">
+    
+    <div class = "outer">
+    <label>* Sellers Name</label>
+	</div>
+    <div class = "outer">
+    <input id = "name" type= "text" name= "name" description="Inputs first name of the user" placeholder="Enter Your Name">
+    </div>
+      
+    <br> <div class = "outer"><label>* Enter Your Address:</label></div>
+    <div class = "outer">
+    <input id = "address" type="text" name = "address" description ="Address" placeholder="Enter Your Address">
+    </div>
+           
+    <br> <div class = "outer"><label>* City:</label></div>
+    <div class = "outer">
+    <input id="city" type="text" min="a" max="z" name="city" description="Inputs city of the user" placeholder="Enter Your City">
+    </div>
+	  
+	   <!--dropdown menu -->
+    <br>
+	<legend>* Select Province:</legend>
+	<select id="dropdown">
+    <option value="ONT">Ontario</option>
+    <option value="ABT">Alberta</option>
+    <option value="BRC">British Columbia</option>
+	<option value="MTA">Manitoba</option>
+	<option value="NBK">New Brunswick</option>
+	<option value="NFB">Newfoundland and Labrador</option>
+	<option value="NWT">Northwest Territories</option>
+	<option value="NS">Nova Scotia</option>
+	<option value="NVT">Nunavut</option>
+	<option value="PEI">Prince Edward Island</option>
+	<option value="QC"> Quebec</option>
+	<option value="SKT">Saskatchewan</option>
+	<option value="YKN">Yukon
+	</select>
+	<br>
+	    <br>
+	<div class = "outer"><label>* Postal Code:</label></div>
+    <div class = "outer">
+    <input id  = "postalcode" type="text" name="postal code" pattern="[x-N-x N-x-N] {6} description="zip code" placeholder="Enter Your Postal Code">
+    </div>
+	  
+	  
+	<br><div class = "outer"><label>* Phone Number</label></div>
+    <div class = "outer">
+    <input id  = "phone" type="number" name="phone" step="10" pattern="NNN-NNN-NNN" description="Inputs phone number of the user" placeholder="Enter your Phone Number">
+    </div>
+	  
+	  
+	<br><div class = "outer"><label>* Email Address:</label></div>
+    <div class = "outer">
+    <input id  = "email" type="text/number" name="email" min="a" max="z" min="0" max="25" description="inpus email of the user" placeholder="Enter Your Email Here">
+    </div>
+	  
+	<p><h2> Vehicle Information</p></h2>
+	  
+	<div class = "outer"><label>* Kilometers</label></div>
+    <div class = "outer">
+    <input id  = "kilometers" type="Text/Number" name="kilometers" min="0" max="150000" description="kilometers" placeholder="Input Kilometers Here">
+    </div>
+	<br>
+	  
+	<div class = "outer"><label>* Vehicle Make</label></div>
+    <div class = "outer">
+    <input id  = "vehiclemake" type="Text/Number" name="kilometers"  		description="Vehicle Make" placeholder="Enter Vehicle Make">
+    </div>
+	<br>
+	  
+	<div class = "outer"><label>* Vehicle Model</label></div>
+    <div class = "outer">
+    <input id  = "vehiclemodel" type="Text/Number" name="vehicle model"  	description="Vehicle model" placeholder="Enter Vehicle model">
+      </div>
+	<br>
+	  
+	<div class = "outer"><label>* Year</label></div>
+    <div class = "outer">
+    <input id  = "vehicleyear" type="Text/Number" name="vehicle year" 	    description="Vehicle year" placeholder="Enter Vehicle Year">
+    
+	</div>
+	
+	<label><h2>Vehicle Features<font></label></h2>
+	
+	<input id = "aircon" type="checkbox" name="air conditioning" value="AC">          Air Conditioning   <br>
+	<input id = "backupcam"     type="checkbox" name="backup camera"    value="BackupC">     Backup Camera      <br>
+	<input id = "heatedseats"      type="checkbox" name="heated seats"	   value="seats">	    Heated Seats 	   <br>
+	<input id = "tpms"             type="checkbox" name="tpms"			   value="tpms">        TPMS		       <br>
+	
+	
+	<label><h2> Vehicle Ownership</h2></label>
+	<form action="insert.php" method="post"
+	<p>
+	<input id = "NPO"   type="radio" name="A" value="a" id="radio1"> No previous owner<br>
+	<input id = "OOPO"  type="radio" name="A" value="b" id="radio2"> Only one previous owner<br>
+	<input id = "MTOPO" type="radio" name="A" value="c" id="radio3"> More than one previous owner<br>
+	
+		<script  type="text/javascript">
+	function store(){
+     var inputName= document.getElementById("name");
+     localStorage.setItem("name", inputName.value);
+	 
+	 var inputAddress= document.getElementById("address");
+	 localStorage.setItem("address", inputName.value);
+	 
+	 var inputName= document.getElementbyId("city");
+	 localStorage.setItem("city", inputName.value);
+	 
+	 var inputName= document.getElementById("dropdown");
+	 localStorage.setItem("dropdown", inputName.value);
+	 
+	 var inputName= document.getElementById("postalcode");
+	 localStorage.setItem("postalcode", inputName.value);
+	 
+	 var inputName= document.getElementById("email");
+	 localStorage.setItem("email", inputName.value);
+	 
+	 var inputName= document.getElementById("phone");
+	 localStorage.setItem("phone", inputName.value);
+	 
+	 var inputName= document.getElementbyid("email");
+	 localStorage.setItem("email", inputName.value);
+	 
+	 var inputName= document.getElementById("kilometers");
+	 localStorage.setItem("kilometers", inputName.value);
+	 
+	 var inputName= document.getElementById("vehiclemake");
+	 localStorage.setItem("vehiclemake", inputName.value);
+	 
+	 var inputName= document.getElementById("vehiclemodel");
+	 localStorage.setItem("vehiclemodel", inputName.value);
+	 
+	 var inputName= document.getElementById("vehicleyear");
+	 localStorage.setItem("vehicleyear", inputName.value);
+	 
+	 var inputName= document.getElementById("aircon");
+	 localStorage.setItem("aircon", inputName.value);
+	 
+	 var inputName= document.getElementById("backupcam");
+	 localStorage.setItem("backupcam", inputName.value);
+	 
+	 var inputName= document.getElementById("heatedseats");
+	 localStorage.setItem("heatedseats");
+	 
+	 var inputName= document.getElementById("tpms");
+	 localStorage.setItem("tpms", inputName.value);
+	 
+	 var inputName= document.getElementById("NPO");
+	 localStorage.setItem("NPO", inputName.value);
+	 
+	 var inputName= document.getElementById("OOPO");
+	 localStorage.setItem("OOPO", inputName.value);
+	 
+	 var inputName= document.getElementById("MTOPO");
+	 localStorage.setItem("MTOPO", inputName.value);
+	 
+	 </script>
+	
+	</p>  
+	</br>
+	<input type="submit" value="Insert">
+	</form>
+	</div>
+	</body>
+	</html>
