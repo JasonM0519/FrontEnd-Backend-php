@@ -13,7 +13,7 @@
 	<body>
 	
 	
-	<form action="insert.php" method="post"
+	<form action="form_submit.php" class"alt" method="POST"
 	
 	<body class="super-container">
 	<h1 id="title">Add a new vehicle</h1>
@@ -177,11 +177,35 @@
 	 var inputName= document.getElementById("MTOPO");
 	 localStorage.setItem("MTOPO", inputName.value);
 	 
+	 // a fuction to validate basic email address format
+	 function validation()
+	 {
+		// seek an @ character in the address
+		if(document.form.f.email.value.indexOf( "@" ) == -1)
+		{
+			// if absent display a message 
+			alert( "Email address is absent or incorrect" );
+			// ...and do not submit the form
+			return false;
+		}	
+	 }
+	 // a declare an error-handing function 
+	 window.onerror = errorhandler;
+	 
+	 // define the error-handling function 
+	 function errorhandler( msg,url, ln )
+	 {
+		alert("Error: +msg+"/nIn File:"+url+"\nAt Line:"+ln);
+		return true;  // tell the browser it's been handled
+	 }
+	 
+	 // This is a deliberate mistake
+	 document.form[ theMistake ].value = "myButton";
 	 </script>
 	
 	</p>  
 	</br>
-	<input type="submit" value="Insert">
+	<input class="alt" value="Submit" name="submit" type="submit"> 
 	</form>
 	</div>
 	</body>
